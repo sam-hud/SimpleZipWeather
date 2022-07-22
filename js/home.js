@@ -16,11 +16,10 @@ $(".form-horizontal").keypress(function(e) {
 function getWeather(){
     var zip = $("#zipCode").val();
     var units = $("#unitChoice").val();
-    var API_KEY = config.API_KEY;
     if(zip != ""){
         $.ajax({
             type: 'GET',
-            url: "https://api.openweathermap.org/data/2.5/weather?zip=" + zip +"&appid="+ API_KEY + "&units=" + units,
+            url: "https://api.openweathermap.org/data/2.5/weather?zip=" + zip +"&appid=d7b8f3717693c988c740b7806ca840b8&units=" + units,
             dataType: "jsonp",
             success: function(result) {
                 var weatherDiv = $('#weatherDiv');
