@@ -1,13 +1,11 @@
-//File for use in Ajax lesson
-
 $(document).ready(function(){
-    //getWeather();
     $("#submitButton").click(function(){
         getWeather();
     });
 
 });
 
+//For enter key functionality
 $(".form-horizontal").keypress(function(e) {
     if((e.which == 13) || (e.which ==3)) {
         getWeather();
@@ -18,7 +16,6 @@ $(".form-horizontal").keypress(function(e) {
 function getWeather(){
     var zip = $("#zipCode").val();
     var units = $("#unitChoice").val();
-    //var zip = 93405;
     if(zip != ""){
         $.ajax({
             type: 'GET',
